@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Semantic/semantic.min.css">
+</head>
+
+<body>
+    <div class="ui main container">
+        <h1> Salut les gens</h1>
+        <% if(locals.flash && locals.flash.error) {%>
+        <div class="ui negative message">
+            <%= flash.error %>
+        </div>
+        <% } %>
+        <form action="/" method="post" class='ui form'>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" class="ui blue labeled submit icon button">
+                <i class="icon edit"></i>Envoyer
+            </button>
+        </form>
+
+    </div>
+</body>
+
+</html>
